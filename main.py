@@ -88,15 +88,14 @@ class GUI(QMainWindow):
             return [1]
         else:
             factors = []
-            limit = number
-            n = 2
             while number != 1:
-                if number % n == 0:
-                    factors.append(n)
-                    number //= n
-                n += 1
-                if n > limit:
-                    n = 2
+                print(number)
+                for n in range(2, number + 1):
+                    if number % n == 0:
+                        factors.append(n)
+                        number //= n
+                        break
+
         return factors
 
     @staticmethod
