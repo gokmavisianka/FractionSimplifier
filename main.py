@@ -89,7 +89,6 @@ class GUI(QMainWindow):
         else:
             factors = []
             while number != 1:
-                print(number)
                 for n in range(2, number + 1):
                     if number % n == 0:
                         factors.append(n)
