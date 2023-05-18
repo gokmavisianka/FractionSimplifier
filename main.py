@@ -38,9 +38,12 @@ class GUI(QMainWindow):
 
         self.PB_exit = QPushButton(parent=self, text="Exit")
         self.PB_exit.setGeometry(QRect(25, 250, 250, 50))
-        self.PB_exit.clicked.connect(quit)
+        self.PB_exit.clicked.connect(self.exit)
 
         self.show()
+
+    def exit(self):
+        sys.exit()
 
     def start_perform(self):
         Thread(target=self.perform).start()
